@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APlayer 本地演示 · 芝芝的作品集</title>
+  <link rel="stylesheet" href="vendor/APlayer.min.css">
+  <style>
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 50% 0%, #22303f 0%, #0d1116 65%);
+      font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    }
+    .wrap { width: 420px; max-width: 92vw; }
+    h1 { color: #e8eef5; font-size: 16px; font-weight: 500; text-align: center; letter-spacing: 2px; margin: 0 0 18px; }
+    p  { color: #7d8b99; font-size: 12px; text-align: center; margin: 14px 0 0; line-height: 1.7; }
+    a  { color: #C20C0C; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>APlayer 本地演示</h1>
+    <div id="player"></div>
+    <p>音频由 make_audio.py 生成 · 点播放试试<br>
+       基于 <a href="https://github.com/DIYgod/APlayer" target="_blank" rel="noopener">APlayer</a>（MIT）做的练习页</p>
+  </div>
+
+  <script src="vendor/APlayer.min.js"></script>
+  <script>
+    new APlayer({
+      container: document.getElementById('player'),
+      theme: '#C20C0C',
+      listFolded: true,
+      audio: [{
+        name: '五声音阶练习',
+        artist: '本地生成',
+        url: 'demo.wav',
+        cover: 'cover.svg'
+      }]
+    });
+  </script>
+</body>
+</html>
